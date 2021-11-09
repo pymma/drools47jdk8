@@ -492,18 +492,18 @@ public class TruthMaintenanceTest extends TestCase {
 
         // check the packages are correctly populated
         assertEquals( "org.drools.test",
-                      ruleBase.getPackages()[0].getName() );
-        assertEquals( "org.drools.test2",
                       ruleBase.getPackages()[1].getName() );
+        assertEquals( "org.drools.test2",
+                      ruleBase.getPackages()[0].getName() );
         assertEquals( "rule1",
-                      ruleBase.getPackages()[0].getRules()[0].getName() );
-        assertEquals( "rule2",
                       ruleBase.getPackages()[1].getRules()[0].getName() );
+        assertEquals( "rule2",
+                      ruleBase.getPackages()[0].getRules()[0].getName() );
 
         // now remove the first rule
         if ( reteooRuleBase != null ) {
-            reteooRuleBase.removeRule( ruleBase.getPackages()[0].getName(),
-                                       ruleBase.getPackages()[0].getRules()[0].getName() );
+            reteooRuleBase.removeRule( ruleBase.getPackages()[1].getName(),
+                                       ruleBase.getPackages()[1].getRules()[0].getName() );
             // } else if ( leapsRuleBase != null ) {
             // leapsRuleBase.removeRule( ruleBase.getPackages()[0].getName(),
             // ruleBase.getPackages()[0].getRules()[0].getName() );
@@ -511,13 +511,13 @@ public class TruthMaintenanceTest extends TestCase {
 
         // Check the rule was correctly remove
         assertEquals( 0,
-                      ruleBase.getPackages()[0].getRules().length );
-        assertEquals( 1,
                       ruleBase.getPackages()[1].getRules().length );
+        assertEquals( 1,
+                      ruleBase.getPackages()[0].getRules().length );
         assertEquals( "org.drools.test2",
-                      ruleBase.getPackages()[1].getName() );
+                      ruleBase.getPackages()[0].getName() );
         assertEquals( "rule2",
-                      ruleBase.getPackages()[1].getRules()[0].getName() );
+                      ruleBase.getPackages()[0].getRules()[0].getName() );
 
         list = IteratorToList.convert( workingMemory.iterateObjects( new ClassObjectFilter( Person.class) ) );
         assertEquals( "removal of the rule should result in retraction of c3's logical assertion",
@@ -543,8 +543,8 @@ public class TruthMaintenanceTest extends TestCase {
                     list.contains( new Person( c1.getType() ) ) );
 
         if ( reteooRuleBase != null ) {
-            reteooRuleBase.removeRule( ruleBase.getPackages()[1].getName(),
-                                       ruleBase.getPackages()[1].getRules()[0].getName() );
+            reteooRuleBase.removeRule( ruleBase.getPackages()[0].getName(),
+                                       ruleBase.getPackages()[0].getRules()[0].getName() );
             // } else if ( leapsRuleBase != null ) {
             // leapsRuleBase.removeRule( ruleBase.getPackages()[1].getName(),
             // ruleBase.getPackages()[1].getRules()[0].getName() );

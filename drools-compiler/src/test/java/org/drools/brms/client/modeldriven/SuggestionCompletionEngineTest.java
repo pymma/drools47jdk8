@@ -175,9 +175,9 @@ public class SuggestionCompletionEngineTest extends TestCase {
         assertEquals( 2,
                       c.length );
         assertEquals( "baz",
-                      c[0] );
-        assertEquals( "bar",
                       c[1] );
+        assertEquals( "bar",
+                      c[0] );
 
         c = com.getFieldCompletionsForGlobalVariable( "bar" );
         assertEquals( 3,

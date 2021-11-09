@@ -469,7 +469,7 @@ abstract public class AbstractRuleBase
                               final Package newPkg) throws PackageIntegrationException {
         final Map globals = pkg.getGlobals();
         final Set imports = pkg.getImports();
-
+        List functions = pkg.getFunctions();
         // First update the binary files
         // @todo: this probably has issues if you add classes in the incorrect order - functions, rules, invokers.
         final PackageCompilationData compilationData = pkg.getPackageCompilationData();
@@ -482,11 +482,12 @@ abstract public class AbstractRuleBase
 
         // Merge imports
         imports.addAll( newPkg.getImports() );
-
+        int beforeFunction = functions.size();
+        functions.addAll(newPkg.getFunctions());
         // Add invokers
         compilationData.putAllInvokers( newCompilationData.getInvokers() );
 
-        if ( compilationData.isDirty() ) {
+        if ( compilationData.isDirty()  || beforeFunction!= functions.size()) {
             if ( this.reloadPackageCompilationData == null ) {
                 this.reloadPackageCompilationData = new ReloadPackageCompilationData();
             }
