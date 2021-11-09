@@ -23,7 +23,7 @@ public class PackageBuilderThreadSafetyTest extends TestCase {
     public void testDummy() {
     }
 
-    public void testThreadSafetyEclipse() {
+    public void ttestThreadSafetyEclipse() {
         execute( JavaDialectConfiguration.ECLIPSE );        
     }
 
