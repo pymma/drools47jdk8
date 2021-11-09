@@ -1,0 +1,8 @@
+#All files .iml (file generate by IntelliJ for Maven)
+*.iml
+.idea/
+target/
+transaction-logs/
+**/ignite/work/
+almady-utils/src/main/java/com/almady/util/enumeration/UserType.java
+SpringBoot.xml

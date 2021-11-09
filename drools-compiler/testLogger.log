@@ -1,0 +1,50 @@
+<object-stream>
+  <list>
+    <org.drools.audit.event.ActivationLogEvent>
+      <activationId>test logger [0]</activationId>
+      <rule>test logger</rule>
+      <declarations></declarations>
+      <type>4</type>
+    </org.drools.audit.event.ActivationLogEvent>
+    <org.drools.audit.event.ActivationLogEvent>
+      <activationId>test logger [0]</activationId>
+      <rule>test logger</rule>
+      <declarations></declarations>
+      <type>6</type>
+    </org.drools.audit.event.ActivationLogEvent>
+    <org.drools.audit.event.ActivationLogEvent>
+      <activationId>test logger [0]</activationId>
+      <rule>test logger</rule>
+      <declarations></declarations>
+      <type>7</type>
+    </org.drools.audit.event.ActivationLogEvent>
+    <org.drools.audit.event.ObjectLogEvent>
+      <factId>1</factId>
+      <objectToString>Cheese( type=&apos;a&apos;, price=10 )</objectToString>
+      <type>1</type>
+    </org.drools.audit.event.ObjectLogEvent>
+    <org.drools.audit.event.ActivationLogEvent>
+      <activationId>test logger [2, 1]</activationId>
+      <rule>test logger</rule>
+      <declarations>$a=Cheese( type=&apos;a&apos;, price=10 )(1); $b=Cheese( type=&apos;b&apos;, price=11 )(2)</declarations>
+      <type>4</type>
+    </org.drools.audit.event.ActivationLogEvent>
+    <org.drools.audit.event.ObjectLogEvent>
+      <factId>2</factId>
+      <objectToString>Cheese( type=&apos;b&apos;, price=11 )</objectToString>
+      <type>1</type>
+    </org.drools.audit.event.ObjectLogEvent>
+    <org.drools.audit.event.ActivationLogEvent>
+      <activationId>test logger [2, 1]</activationId>
+      <rule>test logger</rule>
+      <declarations>$a=Cheese( type=&apos;a&apos;, price=10 )(1); $b=Cheese( type=&apos;b&apos;, price=11 )(2)</declarations>
+      <type>6</type>
+    </org.drools.audit.event.ActivationLogEvent>
+    <org.drools.audit.event.ActivationLogEvent>
+      <activationId>test logger [2, 1]</activationId>
+      <rule>test logger</rule>
+      <declarations>$a=Cheese( type=&apos;a&apos;, price=10 )(1); $b=Cheese( type=&apos;b&apos;, price=11 )(2)</declarations>
+      <type>7</type>
+    </org.drools.audit.event.ActivationLogEvent>
+  </list>
+</object-stream>
