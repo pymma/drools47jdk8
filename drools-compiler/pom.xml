@@ -5,19 +5,14 @@
   <parent>
     <artifactId>drools</artifactId>
     <groupId>org.drools</groupId>
-	  <version>4.0.7</version>
+	  <version>4.0.7-jdk8-PymmaSoftware</version>
   </parent>
 
   <artifactId>drools-compiler</artifactId>
   <packaging>jar</packaging>
   <name>Drools :: Compiler</name>
 
-  <repositories>
-    <repository>
-      <id>basedir</id>
-      <url>file://${basedir}/../m2_repo</url>
-    </repository>
-  </repositories>
+
 
   <build/>
 

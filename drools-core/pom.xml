@@ -5,19 +5,14 @@
   <parent>
     <artifactId>drools</artifactId>
     <groupId>org.drools</groupId>
-    <version>4.0.7</version>
+    <version>4.0.7-jdk8-PymmaSoftware</version>
   </parent>
 
   <artifactId>drools-core</artifactId>
   <packaging>jar</packaging>
   <name>Drools :: Rete-OO Core</name>
 
-  <repositories>
-    <repository>
-      <id>basedir</id>
-      <url>file://${basedir}/../m2_repo</url>
-    </repository>
-  </repositories>  
+
   
   <dependencies>  
     <!-- following are required for parser (lang). May be refactored out of core module. -->

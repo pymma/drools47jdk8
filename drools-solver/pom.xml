@@ -6,7 +6,7 @@
     <parent>
       <groupId>org.drools</groupId>
       <artifactId>drools</artifactId>
-      <version>4.0.7</version>
+      <version>4.0.7-jdk8-PymmaSoftware</version>
     </parent>
 
     <groupId>org.drools.solver</groupId>
@@ -17,12 +17,7 @@
         Drools solver ... TODO
     </description>
 
-    <repositories>
-        <repository>
-            <id>basedir</id>
-            <url>file://${basedir}/../m2_repo</url>
-        </repository>
-    </repositories>
+
 
     <build>
         <pluginManagement>
