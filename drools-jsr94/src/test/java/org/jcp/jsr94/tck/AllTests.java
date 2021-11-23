@@ -42,7 +42,7 @@ public class AllTests extends TestSuite {
         setTckConf();
 
         final TestSuite suite = new TestSuite( "JSR 94 Test Compatability Kit" );
-        suite.addTestSuite( ApiSignatureTest.class );
+       // suite.addTestSuite( ApiSignatureTest.class );
         suite.addTestSuite( ClassLoaderTest.class );
         suite.addTestSuite( ConfigurationExceptionTest.class );
         suite.addTestSuite( HandleTest.class );

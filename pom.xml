@@ -165,18 +165,18 @@
     </organization>
 
     <repositories>
-        <repository>
-            <id>jboss</id>
-            <url>http://repository.jboss.com/maven2/</url>
-        </repository>
-        <repository>
-            <id>jboss-snapshot</id>
-            <url>http://snapshots.jboss.org/maven2</url>
-        </repository>
 
         <repository>
-            <id>codehaus</id>
-            <url>http://repository.codehaus.org/</url>
+            <id>geomajas</id>
+            <url>http://maven.geomajas.org/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>eclipse-eclipse</id>
+            <url>https://repo.eclipse.org/content/repositories/eclipse</url>
+        </repository>
+        <repository>
+            <id>readha-ea</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/</url>
         </repository>
         <repository>
             <id>pymma-snapshot</id>
@@ -187,36 +187,10 @@
             <url>${nexus.host}/repository/opensource-maven/</url>
         </repository>
 
-        <!-- this is needed for Seam which is not in the jboss repo or the maven one in a useful form -->
-        <repository>
-            <id>softeu-repo</id>
-            <url>http://maven.softeu.cz/</url>
-        </repository>
 
 
-        <repository>
-            <id>Maven Snapshots</id>
-            <url>http://snapshots.maven.codehaus.org/maven2/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
 
 
-        <repository>
-            <id>apache.org</id>
-            <name>Maven Snapshots</name>
-            <url>http://people.apache.org/repo/m2-snapshot-repository</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
     </repositories>
 
     <pluginRepositories>
@@ -375,6 +349,7 @@
                         <excludes>
                             <exclude>**/*AbstractTest.java</exclude>
                         </excludes>
+                        <argLine>-Duser.country=US -Duser.language=US -Ddrools.defaultlanguage=us -Ddrools.defaultcountry=US -Ddrools.dateformat="dd-MMM-yyyy"</argLine>
                     </configuration>
                 </plugin>
 
@@ -607,7 +582,7 @@
         <!--module>drools-server</module-->
         <module>drools-analytics</module>
         <module>drools-ant</module>
-        <module>drools-repository</module>
+        <!--module>drools-repository</module-->
         <!--module>drools-jbrms</module-->
         <!--module>drools-examples</module-->
         <!--module>drools-solver</module--><!-- Use the profile solver to add it -->
@@ -782,10 +757,15 @@
                 <artifactId>antlr-runtime</artifactId>
                 <version>3.0</version>
             </dependency>
-            <dependency>
+            <!--dependency>
                 <groupId>org.eclipse.jdt</groupId>
                 <artifactId>core</artifactId>
-                <version>3.2.3.v_686_R32x</version>
+                <version>3.2.3.v_686_R34x</version>
+            </dependency-->
+            <dependency>
+                <groupId>org.eclipse.jdt</groupId>
+                <artifactId>org.eclipse.jdt.core</artifactId>
+                <version>3.10.0.v20140604-1726</version>
             </dependency>
             <dependency>
                 <groupId>janino</groupId>
@@ -812,7 +792,7 @@
             <dependency>
                 <groupId>jsr94</groupId>
                 <artifactId>jsr94-tck</artifactId>
-                <version>1.0.3</version>
+                <version>1.0.3.1</version>
             </dependency>
             <dependency>
                 <groupId>jsr94</groupId>

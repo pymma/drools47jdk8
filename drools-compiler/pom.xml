@@ -30,7 +30,7 @@
     </dependency>
     <dependency>
       <groupId>org.eclipse.jdt</groupId>
-      <artifactId>core</artifactId>
+      <artifactId>org.eclipse.jdt.core</artifactId>
     </dependency>
     <dependency>
       <groupId>janino</groupId>
