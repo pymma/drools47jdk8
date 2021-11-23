@@ -6,7 +6,7 @@
     <parent>
       <groupId>org.drools.solver</groupId>
       <artifactId>drools-solver</artifactId>
-      <version>4.0.7.1-jdk8-PymmaSoftware</version>
+      <version>4.0.7.2-jdk8-PymmaSoftware</version>
     </parent>
 
     <artifactId>drools-solver-examples</artifactId>
