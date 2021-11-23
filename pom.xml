@@ -8,7 +8,7 @@
     <artifactId>drools</artifactId>
     <packaging>pom</packaging>
     <name>Drools</name>
-    <version>4.0.7.2-jdk8-PymmaSoftware</version>
+    <version>4.0.7.3-jdk8-PymmaSoftware-SNAPSHOT</version>
     <description>A rule production system</description>
     <url>http://www.jboss.com/products/rules</url>
 
